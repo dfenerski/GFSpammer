@@ -2,7 +2,7 @@ const robot = require("robotjs");
 
 
 (async () => {
-    robot.setKeyboardDelay(50);
+    // robot.setKeyboardDelay(1);
     await new Promise((resolve) => {
         setTimeout(() => {
             resolve()
@@ -17,13 +17,13 @@ const robot = require("robotjs");
             resolve()
         }, 2000)
     })
-    for (let i = 0; i < 1000; i++) {
-        robot.typeString("I love you Vani");
+    for (let i = 0; i < 100; i++) {
+        robot.typeStringDelayed("I love you babe", 1500);
         robot.keyTap("enter");
-        await new Promise((resolve) => {
-            setTimeout(() => {
-                resolve()
-            }, 75);
-        })
+        // await new Promise((resolve) => {
+        //     setTimeout(() => {
+        //         resolve()
+        //     }, 100);
+        // })
     }
 })()
